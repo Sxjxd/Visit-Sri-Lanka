@@ -1,0 +1,778 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* -- HEADER & NAVIGATION BAR -- */
+ 
+#logo{
+    margin-right: auto;
+    padding-top: 10px;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+}
+    a{
+        text-decoration: none;
+    }
+    .nav ul{
+        list-style: none;
+    }
+    .hcontainer{
+        max-width: 1170px;
+        margin: auto;
+    }
+    .Hrow{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .align-items-center{
+        align-items: center;
+    }
+    .justify-content-between{
+        justify-content: space-between;
+    }
+        /*Header*/
+    .header{
+        background-color:#24262b;
+        padding: 35px 0;
+        position: relative;
+    }
+    .header .logo,
+    .header .logo{
+        padding: 0 15px;
+    }
+    .header .logo a{
+        font-size: 30px;
+        color: #ffffff;
+        text-transform: capitalize;
+    }
+    .header .nav ul li{
+        display: inline-block;
+        margin-left: 40px;
+    }
+    .header .nav ul li a{
+        display: block;
+        font-size: 20px;
+        padding: 10px 0;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: capitalize;
+        transition: all 0.5s ease;
+    }
+    .header .nav .donate a{
+        color: rgb(227, 227, 103);
+    }
+    .header .nav ul li a:hover,
+    .header .nav ul li a.active{
+        color:#ffffff;
+    }
+    .header #nav-check{
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+    .nav-toggler{
+        height: 30px;
+        width: 40px;
+        background-color: #ffffff;
+        border-radius: 4px;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+    }
+    .nav-toggler span{
+        display: block;
+        height: 2px;
+        width: 20px;
+        background-color: #24262b;
+        position: relative;
+    }
+    .nav-toggler span::before,
+    .nav-toggler span::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #24262b;
+        left: 0px;
+    }
+    .nav-toggler span::before{
+        top: -4.8px;
+    }
+    .nav-toggler span::after{
+        top: 4px;
+    }
+    @media(max-width: 991px){
+        .nav-toggler{
+            display: flex;
+        }
+        .header .nav{
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            background-color: #24262b;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            visibility: hidden;
+        }
+        .header .nav ul li .dropbtn{
+            display: block;
+            margin: 0;
+        }
+        .header #nav-check:checked ~ .nav{
+            opacity: 1;
+            visibility: visible;
+        }
+        .header #nav-check:focus ~ .nav-toggler{
+            box-shadow: 0 0 15px #84c0ec;
+        }
+        .header #nav-check:checked ~ .nav-toggler span{
+            background-color: transparent;
+        }
+        .header #nav-check:checked ~ .nav-toggler span::before{
+            top:0;
+            transform: rotate(45deg);
+        }
+        .header #nav-check:checked ~ .nav-toggler span::after{
+            top:0;
+            transform: rotate(-45deg);
+        }
+        .header .dropbtn{
+            padding: 7px;
+            margin: 1em;
+        }
+    }
+    
+.dropbtn {
+    background-color: #84c0ec;
+    color: #24262b;
+    padding: 15px;
+    margin-right: 1.5em;
+    font-size: 20px;
+    font-weight: 550;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+}
+      
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+    
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+          
+.dropdown-content a {
+    color: #24262b;
+    font-weight: 600;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+          
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}          
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+        /**** HEADER & NAVIGATION BAR ENDS ****/
+
+
+
+    /* --- Footer ---*/
+.footer{
+    background-color: #24262b;
+    padding: 70px 0;
+
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-family:'Segoe UI', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 700;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: rgb(16, 129, 205);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+}
+.footer-col .social a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: rgb(149, 202, 240);
+    transition: all 0.3s ease;
+}
+.footer-col .social a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap
+}
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.footerList{
+    list-style: none;
+}
+
+/*Responsive Footer*/
+@media(max-width: 767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width: 574px){
+    .footer-col{
+        width: 100%;
+    }
+}
+    /**** Footer Ends ****/
+
+
+
+    /** --- HOMEPAGE --- **/
+.mainContainer{
+    width: 100%;
+    padding: 0 20px;
+    }
+
+h2{
+    text-align: center;
+    font-size: 2em;
+    font-family: cursive, sans-serif;
+}
+h3{
+    font-size: 1.5em;
+    font-family: cursive;
+}
+
+.mainImage{
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 80%;
+}
+#homeImage{
+    width: 100%;
+    height: auto;
+    margin: 1em;
+}
+.mainIntro{
+    font-size: 18px;
+}
+#awesome{
+    padding-bottom: 0em;
+    display: flex;
+    flex-direction: row;
+}
+
+#awesome div{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#economy{
+    padding-bottom: 0em;
+    display: flex;
+    flex-direction: row;
+}
+
+#economy div{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#flag{
+    padding-bottom: 0em;
+    display: flex;
+    flex-direction: row;
+}
+
+#flag div{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#interesting{
+    padding-bottom: 0em;
+    display: flex;
+    flex-direction: row;
+}
+
+#interesting div{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+@media (max-width: 1250px){
+    #homeImage{
+        margin: auto;
+    }
+    #awesome{
+        flex-direction: column;
+        
+    }
+    #economy{
+        flex-direction: column;
+        padding: auto;
+    }
+    #flag{
+        flex-direction: column;
+        padding: auto;
+    }
+    #interesting{
+        flex-direction: column;
+        padding: 0;
+        margin-left: 10px;
+    }
+}
+
+#interesting{
+    padding-bottom: 3em;
+}
+
+.history li{
+    font-size: 18px;
+    margin: 0.5em;
+}
+.facts li{
+    font-size: 18px;
+    margin: 1em;
+}
+p{
+    line-height: 1.5em;
+    font-size: 18px;
+}
+@media (max-width: 551px){
+    p{
+        line-height: normal;
+        font-size: 16px;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    h3{
+        font-size: 22px
+    }
+    #people{
+        margin: auto;
+    }
+    #homeImage{
+        float: right;
+
+    }
+    .explore{
+        padding: 1em;
+    }
+    .climate{
+        padding: 1em;
+    }
+    .people{
+        padding: 1em;
+    }
+    .factsContainer{
+        padding: 1em;
+    }
+}
+
+
+
+/* ---- Wildlife Page ---- */
+#tbleSection{
+    margin-top: 3em;
+}
+
+#sinharaja{
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+#yala-wild{
+    float: left;
+    width: 100%;
+    max-width: 45%;
+}
+#yala-safari{
+    float: inline-start;
+    width: 100%;
+    max-width: 60%;
+}
+.sinharajaImage{
+    text-align: center;
+}
+.yalaImage{
+    text-align: center;
+}
+#entrance{
+    float: inline-start;
+    width: 100%;
+    max-width: 20%;
+}
+#flower{
+    float: inline-start;
+    width: 100%;
+    max-width: 20%;
+}
+#monkey{
+    float: inline-start;
+    width: 100%;
+    max-width: 20%;
+}
+#millepede{
+    float: inline-start;
+    width: 100%;
+    max-width: 25.5%;
+}
+#sinharaja-forest{
+    float: inline-start;
+    width: 100%;
+    max-width: 45%;
+}
+@media (max-width: 1525px){
+    iframe{
+        width: 50%;
+        max-height: 300px;
+    }
+}
+@media (max-width: 1150px){
+    iframe{
+        width: 50%;
+        max-height: 250px;
+    }
+}
+@media (max-width: 960px){
+    iframe{
+        width: 50%;
+        max-height: 200px;
+    }
+@media (max-width: 650px){
+        iframe{
+            width: 50%;
+            max-height: 125px;
+            overflow-x: scroll;
+        }
+    }
+    @media (max-width: 450px){
+        iframe{
+            width: 100%;
+            max-width: 50%;
+            max-height: 100px;
+        }
+    }
+}
+.tble{
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tableHeading {
+    text-align: center;
+    font-style: italic;
+}
+
+table, td, th{
+    border: 1px solid black;
+    text-align: center;
+    
+}
+thead{
+    background-color: lightgreen;
+}
+tfoot{
+    background-color: lightgray;
+}
+.tName{
+    width: 200px;
+}
+
+/* ---- Activities Page ---- */
+
+.activityHeading{
+    text-align: center;
+    font-weight: 1000;
+}
+#whale-watching{
+    width: 100%;
+    max-width: 80%;
+}
+#surfing{
+    width: 100%;
+    max-width: 60%;
+    margin-bottom: 1em;
+}
+#surf-shop{
+    float:right;
+    width: 100%;
+    max-width: 38%;
+    max-height: 500px;
+    margin-bottom: 1em;
+}
+#adams-peak-steps{
+    float: right;
+    width: 100%;
+    max-width: 50%;
+}
+#adams-peak-night{
+    width: 100%;
+    max-width: 50%;
+}
+#wildlife-safari{
+    float: right;
+    width: 100%;
+    max-width: 50%;
+    max-height: 455px ;
+}
+#yala-leopard{
+    width: 100%;
+    max-width: 50%;
+    max-height: 455px;
+}
+.visitHeritage{
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 350;
+    background-color: whitesmoke;
+}
+.Hcenter{
+    display: flex;
+    justify-content: center;
+}
+
+.heritageLink{
+    position: relative;
+    width: 100%;
+}
+.heritageLink img{
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 80px;
+}
+
+.heritageLink .Sbtn{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    right: 55%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    background-color: rgba(247, 244, 244, 0.9);
+    color: rgba(245, 222, 222, 0.849);
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+.Sbtn a{
+    text-decoration: none;
+    color: black;
+}
+.heritageLink .Cbtn{
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    right: 15%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(247, 244, 244, 0.9);
+    color: rgba(245, 222, 222, 0.849);
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+.Cbtn a{
+    text-decoration: none;
+    color: black;
+}
+.heritageLink .Cbtn:hover{
+    background-color: antiquewhite;
+}
+.heritageLink .Sbtn:hover{
+    background-color: antiquewhite;
+}
+@media (max-width: 930px) {
+    .heritageLink .Sbtn{
+        padding: 22px 46px;
+        padding-left: 1em;
+        padding-right: 1em;
+        text-align: center;
+    }
+}
+@media (max-width: 822px){
+    .heritageLink .Sbtn{
+        font-size: 14px;
+        transform: translate(-150%, -100%);
+    
+    }
+}
+@media (max-width: 822px){
+    .heritageLink .Cbtn{
+        font-size: 14px;
+        transform: translate(40%, -140%);
+    
+    }
+}
+@media (max-width: 730px){
+    .heritageLink .Sbtn{
+        display: flex;
+        align-self: flex-end;
+        transform: scale(120%, 120%);
+        padding: 20px 80px 20px 30px;       
+        font-size: 12px;
+    }
+}
+@media (max-width: 730px){
+    .heritageLink .Cbtn{
+        transform: scale(120%, 120%);
+        padding: 20px 80px 20px 30px;       
+        font-size: 12px;
+        
+    
+    }
+}
+@media (max-width: 730px){
+    .heritageLink .Sbtn{
+        transform: translate(-60%, -10%);
+        font-size: 14px;
+    }
+}
+@media (max-width: 460px){
+    .heritageLink .Cbtn {
+        transform: translate(-30%,0%);
+        font-size: 14px;
+        opacity: 80%;
+    }
+  @media (max-width: 460px){
+    .heritageLink .Sbtn{
+        font-size: 14px;
+        opacity: 80%;
+    }
+}
+}
+
+/* ---- Beaches Page ---- */
+.mainContainer{
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#beachContainer{
+    width: 100%;
+    padding-top: 1em;
+    line-height: 30px;
+    margin: 1em;
+}
+#UnawatunaContainer{
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: row;
+}
+#Unawatuna-Beach{
+    display: flex;
+    flex-direction: row;
+}
+#Unawatuna-Beach div{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+@media (max-width: 1250px) {
+    #Unawatuna-Beach div{
+        flex-direction: column;
+}
+#Unawatuna-Beach{
+    width: 100%;
+}
+
+#ArugambayBeach{
+    float: inline-end;
+    width: 100%;
+    max-width: 50%;
+}
+#Surf-Arugambay{
+    float: inline-end;
+    width: 100%;
+    max-width: 40%;
+}
+#sperm-whale{
+    float: inline-end;
+    width: 100%;
+    max-width: 50%;
+    max-height: 445px;
+}
+#Mirissa-Beach{
+    width: 100%;
+    max-width: 40%;
+}
+
+/* Purchase & Donate page */
+
+.traditionalList ol{
+    list-style: none;
+}
+
+.souvenir{
+    font-family: Haettenschweiler, 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+}
