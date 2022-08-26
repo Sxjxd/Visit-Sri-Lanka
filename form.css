@@ -1,0 +1,152 @@
+ /* ------- ACTIVITY BOOKING FORM -------*/
+
+#form{
+    width: 70%;
+    margin: auto;
+
+}
+/*(INTRO) FIELDSET */
+.introSet legend{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: #283452;
+    text-shadow: 2px 2px 2px #ff7d7d;
+}
+.introSet{
+    margin: 1em;
+    padding-bottom: 0;
+    background-color: azure;
+    border-radius: 3em;
+}
+/* -- FIELDSET --*/
+.FirstSet{
+    margin: 1em;
+    padding-top: 0.5em;
+    text-align: center;
+    background-color: azure;
+    border-top-left-radius: 10px;
+    
+}
+
+.FirstSet .p{
+    padding: 10px;
+}
+
+.FirstSet label{
+    margin-right: 10px;
+    font-size: 1em;
+}
+/* -- FIELDSET --*/
+
+.SecondSet{
+    margin: 1em;
+    background-color: azure;
+    border-bottom-right-radius: 10px;
+}
+
+#formOverall{
+    margin: 1em;
+    background-color: azure
+}
+
+.NotePara{
+    font-size: 14px;
+    font-weight: bold;
+}
+.foreignHead{
+    font-weight: bold;
+    font-size: 1.5em;
+    list-style-type: none;
+    margin-bottom: 0.5em;
+    text-align: center;
+    text-shadow: 0 0 2px #000000;
+}
+.foreignList{
+    text-decoration: none;
+}
+.localHead{
+    font-weight: bold;
+    font-size: 1.5em;
+    list-style-type: none;
+    margin-bottom: 0.5em;
+    text-align: center;
+    text-shadow: 0 0 2px #000000;
+}
+.foreignSet{
+    float: left;
+    margin: 10px;
+}
+.localSet{
+    float: inline-start;
+    margin-left: 45%;
+    margin-bottom: 10px;
+}
+
+.localList{
+    list-style-type: none;
+    text-align: center;
+    margin: 1em;
+    font-size: 1.2em;
+}
+.foreignList{
+    list-style-type: none;
+    text-align: center;
+    margin: 1em;
+    font-size: 1.2em;
+}
+.Checkout{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* CHECKOUT */
+
+.outputList{
+    list-style-type: none;
+}
+.outputList li{
+    margin: 1em;
+}
+
+/* ----- Activities Page Button Link ----- */
+.ticketLink{
+    color: #24262b;
+}
+.ticketBtn{
+    background-color: rgba(116, 127, 139, 0.784);
+    border-radius: 10px;
+    border-color: grey;
+    padding: 15px;
+    cursor: pointer;
+}
+.ticketBtn:hover{
+    background-color: #ff7d7d;
+    transition: 0.5s;
+}
+
+.btnPara button{
+    width: auto;
+    margin: auto;
+}
+
+.btnPara{
+    width: 100%;
+}
+
+/*---- FORM BUTTONS ---*/
+
+.Fbtn{
+    background-color: rgb(255, 240, 127);
+    border-radius: 15px;
+    width: 4cm;
+    height: 1cm;
+    cursor: pointer;
+
+}
+
+
+
+  
+  

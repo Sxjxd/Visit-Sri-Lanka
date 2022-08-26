@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name ="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name ="description" content="Visit Sri Lanka, one of the best tourist destinations in the world">
+    <title>Activity Booking</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="form.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        
+<!--FAVICON-->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="Pictures/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Pictures/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Pictures/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="Pictures/Favicon/site.webmanifest">
+    <link rel="mask-icon" href="Pictures/Favicon/safari-pinned-tab.svg" color="#447fe7">
+    <link rel="shortcut icon" href="Pictures/Favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-config" content="Pictures/Favicon/browserconfig.xml">
+    <meta name="theme-color" content="#c4e4ea">  
+</head>
+
+<body>
+<!--HEADER & NAVIGATION-->
+<body>
+    <header class="header">
+        <div class="hcontainer">
+            <div class="Hrow align-items-center justify-content-between">
+            <div class="logo">
+                <a href="index.html"><img id="logo" src="Pictures/logo.png" alt="Logo"></a>
+            </div>
+            <input type="checkbox" id="nav-check">
+            <label for="nav-check" class="nav-toggler">
+                <span></span>
+            </label>
+            <nav class="nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="beach.html">Beaches</a></li>
+                <li><a href="wild_life.html">Wildlife</a></li>
+            <div class="dropdown">
+                    <li class="dropbtn">Heritage</li>
+                <div class="dropdown-content">
+                    <a href="sigiriya.html">Ancient City of Sigiriya</a>
+                    <a href="central_highlands.html">Central Highlands of Sri Lanka</a>
+                </div>
+            </div>
+                    <li class="donate"><a href="purchase_donate.html">Purchase & Donate</a></li>
+            </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <!--------TICKETING FORM----------->
+    <form id="formTicket">
+        <fieldset class="introSet">
+            <legend>Book Your Ticket</legend>
+        <p>
+        <ul class="foreignSet">
+            <li class="foreignHead">FOREIGN</li>
+            <ul class="foreignList">
+               <li>Adult Pass  <b>LKR 5,000</b></li>
+               <li>Child Pass (Age 3-12)  <b>LKR 2,500</b></li>
+               <li>Foreign Annual Pass  <b>LKR 15,000</b></li>
+            </ul>
+        </ul> 
+        <ul class="localSet">
+            <li class="localHead">LOCAL</li>
+            <ul class="localList">
+               <li>Adult Pass  <b>LKR 1,000</b></li> 
+               <li>Child Pass (Age 3-12)  <b>LKR 500</b></li>
+               <li>Local Annual Pass  <b>LKR 4,500</b></li>
+            </ul>
+        </ul>
+        </p>
+        
+        </fieldset>
+        <fieldset class="FirstSet">
+            <p>
+                <label>Choice of ticket</label>
+            <select name="dropdown" id="cot" required>
+                <option value="" selected disabled> Select Ticket Type</option>
+                <option value="Foreign Adult Pass">Foreign Adult Pass</option>
+                <option value="Foreign Child Pass">Foreign Child Pass</option>
+                <option value="Local Adult Pass">Local Adult Pass</option>
+                <option value="Local Child Pass">Local Child Pass</option>
+                <option value="Local Annual Pass">Local Annual Pass</option>
+                <option value="Foreign Annual Pass">Foreign Annual Pass</option>
+            </select><br>
+            </p>
+        <p>
+            <label>Number of Tickets</label>
+            <input id="numTicket" type="number" min="0" required></input>
+            <br>
+        </p>
+        <p>
+            <label>Duration</label>
+            <input id="duration3h" type="radio" name="duration" value="3 Hours" required>
+            <label>3 Hours</label>
+
+            <input id="duration1/2" type="radio" name="duration" value="1/2 Day">
+            <label>1/2 Day</label>
+
+            <input id="duration1d"  type="radio" name="duration" value="1 Day">
+            <label for="duration1d">Full Day</label>
+
+            <input id="duration2d"  type="radio" name="duration" value="2 Days">
+            <label>2 Days</label><br>
+        </p>
+        <p>
+            <label>Food Token</label><input id="foodToken" type="checkbox"><br>
+        </p>
+        <p id="formOutput">
+
+        </p>
+
+            <input class="Fbtn" type="button" value="+ Add to Order" id="addBtn">
+            <input class="Fbtn" type="button" value="Add to Favourites" id="addFav">
+            <input class="Fbtn" type="button" value="Order Favourite" id="orderFav">
+
+            
+
+    
+        </fieldset>
+        <fieldset class="SecondSet">
+            <legend class="Checkout">Checkout</legend>
+            <div id="orderlist">
+
+            </div>
+            <p id="formOverall">
+
+            </p>
+            <input class="Fbtn" type="button" value="Place Order" id="placeBtn">
+            <input  class="Fbtn" type="button" value="Check Loyalty" id="loyaltyBtn">
+        </fieldset>
+
+  
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>
