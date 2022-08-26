@@ -7,6 +7,8 @@
         <title>Visit Sri Lanka</title>
         <link rel="stylesheet" href="normalize.css">
         <link rel="stylesheet" href="styling.css">
+        <link rel="stylesheet" href="donation_form.css">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <!--FAVICON-->
 <link rel="manifest" href="manifest.json">
@@ -127,10 +129,55 @@
     Sri Lanka is a developing country and is going through an economic crisis due to the pandemic and politics, therefore the country is need of donations like this which will enable us to recover and restart.
     On the other hand, the country will also be able to satisfy all other tourists who step into this paradise island with your support! (Click the image below to donate)
 </p>
-    <div class="PurchaseGallery">
-    <img id="donate" src="Pictures/Purchase_donate/donate.webp" alt="Donate">
-    </div>
+
+<!----- DONATIONS FORM ----->
+
+<main>
+    <form class="mainForm" action="#" method="post">
+
+      <h1 class="donateHead">Donate here</h1>
+      <div class="custom-select">
+        <select>
+          <option value="0">Select Amount</option>
+          <option value="1">LKR 100</option>
+          <option value="2">LKR 250</option>
+          <option value="3">LKR 500</option>
+          <option value="4">LKR 1,000</option>
+          <option value="5">LKR 2,500</option>
+          <option value="6">LKR 5,000</option>
+          <option value="6">LKR 10,000</option>
+        </select>
+      </div><br>
+
+      <section>        
+        <label for="Cnumber">Card number</label>
+        <!-- Allow for spaces and for shorter and longer payment card numbers -->
+        <input id="Cnumber" name="Cnumber" autocomplete="Cnumber" inputmode="numeric" maxlength="19" required>
+      </section>
+
+      <section>        
+        <label for="Cname">Name on card</label>
+        <input id="Cname" name="Cname" autocomplete="Cname" maxlength="50" pattern="[\p{L} \-\.]+" required>
+      </section>
+      
+      <section id="Cexpiry-csc">      
+        <div>
+          <label for="Cexpiry">Expiry date</label>
+          <input id="Cexpiry" name="Cexpiry" autocomplete="Cexpiry" placeholder="MM/YY" maxlength="5" required>
+        </div> 
+        <div>
+          <label for="Ccvv">CVV</label>
+          <input id="Ccvv" name="Ccvv" inputmode="numeric" maxlength="4" required>
+          <div class="explanation">3/4 Digit Pincode</div>
+        </div>
+      </section>  
+      <button id="donateBtn">Make Donation</button>
+    </form>
+  </main>
+
     <p class="thankyou">Thank you!</p>
+
+
 <div class="NFT">
 <h3>NFT Merchandise</h3>
     <div class="PLC-logo">
@@ -152,6 +199,7 @@
 
 
 </div>
+<script src="donate_form.js"></script>
 </body>
 
 <footer class="footer">
